@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/popup_background"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/popupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📖 모드를 선택하세요!"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/alone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="혼자 하기"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:background="@drawable/btn_alone_gradient"
+        android:elevation="2dp"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/friends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="친구와 함께"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:background="@drawable/btn_friend_gradient"
+        android:elevation="2dp"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"/>
+
+
+    <Button
+        android:id="@+id/together"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="모두와 함께"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:background="@drawable/btn_together_gradient"
+        android:elevation="2dp"
+        android:padding="12dp"/>
+
+</LinearLayout>

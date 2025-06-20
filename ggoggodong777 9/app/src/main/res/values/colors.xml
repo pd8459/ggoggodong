@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#6200EE</color> <!-- 기본 보라색 -->
+    <color name="primary_variant">#3700B3</color> <!-- 짙은 보라색 -->
+    <color name="onPrimary">#FFFFFF</color> <!-- Primary 위에 올려지는 텍스트 색상, 흰색 -->
+
+    <!-- Secondary Colors -->
+    <color name="secondary">#03DAC5</color> <!-- 연한 청록색 -->
+    <color name="secondary_variant">#018786</color> <!-- 짙은 청록색 -->
+    <color name="onSecondary">#000000</color> <!-- Secondary 위에 올려지는 텍스트 색상, 검정색 -->
+
+    <!-- Background Colors -->
+    <color name="background">#FFFFFF</color> <!-- 배경색, 흰색 -->
+    <color name="onBackground">#000000</color> <!-- 배경 위 텍스트 색상, 검정색 -->
+
+    <!-- Surface Colors -->
+    <color name="surface">#FFFFFF</color> <!-- 표면 색상, 흰색 -->
+    <color name="onSurface">#000000</color> <!-- 표면 위 텍스트 색상, 검정색 -->
+
+    <!-- Error Colors -->
+    <color name="error">#B00020</color> <!-- 에러 색상, 빨간색 -->
+    <color name="onError">#FFFFFF</color> <!-- 에러 텍스트 색상, 흰색 -->
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color> <!-- 기본 텍스트 색상, 어두운 회색 -->
+    <color name="text_secondary">#757575</color> <!-- 보조 텍스트 색상, 회색 -->
+    <color name="text_on_light_background">#000000</color> <!-- 밝은 배경 위 텍스트 색상 -->
+    <color name="text_on_dark_background">#FFFFFF</color> <!-- 어두운 배경 위 텍스트 색상 -->
+
+    <!-- Accent Colors -->
+    <color name="accent">#FF4081</color> <!-- 핑크색 강조 색상 -->
+
+    <!-- Custom Colors -->
+    <color name="button_background">#000000</color> <!-- 버튼 배경 색상, 검정색 -->
+    <color name="button_text">#FFFFFF</color> <!-- 버튼 텍스트 색상, 흰색 -->
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#0000FF</color>
+
+
+
+
+</resources>

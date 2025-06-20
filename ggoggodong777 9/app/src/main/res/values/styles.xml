@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 앱 전체 테마 -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 원하는 전역 색상 지정 가능 -->
+    </style>
+
+    <!-- 버튼에 적용할 스타일 -->
+    <style name="MyCustomButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_rounded_button</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+</resources>

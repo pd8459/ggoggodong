@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 배경 이미지 -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/character2"
+        android:contentDescription="Background image" />
+
+    <!-- 오른쪽 입력칸과 체크박스 수직 배치 -->
+    <LinearLayout
+        android:id="@+id/inputContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="80dp"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <!-- 닉네임 입력 -->
+        <EditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="374dp"
+            android:layout_height="63dp"
+            android:background="@drawable/rounded_rectangle"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:hint="닉네임"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:textSize="16sp" />
+
+
+
+        <!-- 인증코드 + 확인 버튼 수평 배치 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="63dp"
+                android:hint="이메일"
+                android:background="@drawable/rounded_rectangle"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA" />
+
+            <Button
+                android:id="@+id/btnVerifyCode"
+                android:layout_width="80dp"
+                android:layout_height="63dp"
+                android:text="인증"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#84CFFF"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- 비밀번호 입력 -->
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="374dp"
+            android:layout_height="63dp"
+            android:background="@drawable/rounded_rectangle"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:textSize="16sp" />
+
+        <!-- 비밀번호 확인 입력 -->
+        <EditText
+            android:id="@+id/editTextConfirmPassword"
+            android:layout_width="374dp"
+            android:layout_height="63dp"
+            android:background="@drawable/rounded_rectangle"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:hint="비밀번호 확인"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:textSize="16sp" />
+
+        <!-- 체크박스 + 텍스트 수평 배치 -->
+        <CheckBox
+            android:id="@+id/checkboxAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="16dp"
+            android:text="모두 동의"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="374dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:paddingStart="16dp">
+
+            <!-- 기본 체크박스 -->
+            <CheckBox
+                android:id="@+id/checkboxConsent"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp" />
+
+
+            <!-- (필수) -->
+            <TextView
+                android:id="@+id/requiredText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(필수)"
+                android:textColor="#A1A4B2"
+                android:textSize="14sp"
+                android:fontFamily="@font/anuphan_light"
+                android:letterSpacing="0.05"
+                android:lineHeight="15sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="4dp" />
+
+            <!-- 만 14세 미만 보호자 동의 -->
+            <TextView
+                android:id="@+id/consentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="만 14세 미만 보호자 동의"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:fontFamily="@font/anuphan_light"
+                android:letterSpacing="0.05"
+                android:lineHeight="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 두 번째 체크박스 + 텍스트 수평 배치 -->
+        <LinearLayout
+            android:layout_width="374dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:paddingStart="16dp">
+
+            <!-- 두 번째 체크박스 -->
+            <CheckBox
+                android:id="@+id/checkboxMarketingConsent"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- (필수) -->
+            <TextView
+                android:id="@+id/requiredText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(필수)"
+                android:textColor="#A1A4B2"
+                android:textSize="14sp"
+                android:fontFamily="@font/anuphan_light"
+                android:letterSpacing="0.05"
+                android:lineHeight="15sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/marketingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="서비스 이용 약관"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:fontFamily="@font/anuphan_light"
+                android:letterSpacing="0.05"
+                android:lineHeight="15sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="4dp" />
+        </LinearLayout>
+
+        <!-- 세 번째 체크박스 + 텍스트 수평 배치 -->
+        <LinearLayout
+            android:layout_width="374dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:paddingStart="16dp">
+
+            <!-- 세 번째 체크박스 -->
+            <CheckBox
+                android:id="@+id/checkboxTerms"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- (필수) -->
+            <TextView
+                android:id="@+id/requiredText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(필수)"
+                android:textColor="#A1A4B2"
+                android:textSize="14sp"
+                android:fontFamily="@font/anuphan_light"
+                android:letterSpacing="0.05"
+                android:lineHeight="15sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/termsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="개인정보 이용수집 동의"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:fontFamily="@font/anuphan_light"
+                android:letterSpacing="0.05"
+                android:lineHeight="15sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="4dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/signupImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/signup"
+            android:contentDescription="Sign Up Button"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:focusable="true" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

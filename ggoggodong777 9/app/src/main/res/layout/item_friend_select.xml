@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <!-- 친구 프로필 이미지 (원형) -->
+        <ImageView
+            android:id="@+id/friendImage"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/default_profile"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_circle"
+            android:contentDescription="프로필 이미지" />
+
+        <!-- 친구 이름 -->
+        <TextView
+            android:id="@+id/textNickname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="Friend Name"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/anuphan_regular" />
+
+        <!-- 체크박스 -->
+        <CheckBox
+            android:id="@+id/checkboxSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

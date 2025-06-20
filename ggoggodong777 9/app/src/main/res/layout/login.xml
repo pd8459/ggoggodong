@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 배경 이미지 꽉 채우기 -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/character"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 입력 필드, 버튼, 텍스트 그룹 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="start"
+        android:paddingStart="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="160dp">
+
+        <!-- 이메일 입력 -->
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="374dp"
+            android:layout_height="63dp"
+            android:background="@drawable/rounded_rectangle"
+            android:hint="이메일"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 비밀번호 입력 -->
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="374dp"
+            android:layout_height="63dp"
+            android:background="@drawable/rounded_rectangle"
+            android:hint="비밀번호"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:inputType="textPassword"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 로그인 버튼 이미지 -->
+        <ImageView
+            android:id="@+id/loginButtonImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/loginbutton"
+            android:contentDescription="Login Button"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/forgotPasswordText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비밀번호를 잊으셨나요?"
+            android:textColor="#3F414E"
+            android:textSize="14sp"
+            android:gravity="end"
+            android:paddingEnd="8dp"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/noAccountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="계정이 없으신가요?"
+                android:textColor="#A1A4B2"
+                android:textSize="14sp" />
+
+            <!-- 회원가입 텍스트 -->
+            <TextView
+                android:id="@+id/signUpText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원가입"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

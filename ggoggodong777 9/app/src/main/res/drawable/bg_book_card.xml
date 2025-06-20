@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- 그라데이션 배경 색상 -->
+    <gradient
+        android:startColor="#FFF8E1"
+        android:endColor="#FFE082"
+        android:angle="270" />
+
+    <!-- 모서리 둥글게 -->
+    <corners android:radius="12dp" />
+
+    <!-- 그림자 느낌을 위한 패딩 (옵션) -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+
+</shape>

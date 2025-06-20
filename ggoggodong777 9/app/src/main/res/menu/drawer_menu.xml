@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sticker_button"
+        android:title="스티커"/>
+    <item
+        android:id="@+id/face_button"
+        android:title="얼굴"/>
+    <item
+        android:id="@+id/eyes_button"
+        android:title="눈"/>
+    <item
+        android:id="@+id/nose_button"
+        android:title="코"/>
+    <item
+        android:id="@+id/mouth_button"
+        android:title="입"/>
+    <item
+        android:id="@+id/hair_button"
+        android:title="헤어"/>
+</menu>

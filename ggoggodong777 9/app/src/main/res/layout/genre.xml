@@ -1,0 +1,118 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 왼쪽 탭 영역 -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/tabContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/backtab"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/tab1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/traditionaltab"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:contentDescription="전래동화" />
+
+            <ImageButton
+                android:id="@+id/tab2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/fantasytab"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:contentDescription="판타지동화" />
+
+            <ImageButton
+                android:id="@+id/tab3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/lessontab"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:contentDescription="교훈적 동화" />
+
+            <ImageButton
+                android:id="@+id/tab4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/animaltab"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:contentDescription="우화" />
+
+            <ImageButton
+                android:id="@+id/tab5"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/adventuretab"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:contentDescription="모험동화" />
+
+            <ImageButton
+                android:id="@+id/tab6"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/comictab"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:contentDescription="코믹동화" />
+
+            <ImageButton
+                android:id="@+id/tab7"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:src="@drawable/familytab"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:contentDescription="가족동화" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!-- 오른쪽 상단 버튼 -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tabContainer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <ImageButton
+        android:id="@+id/rightTopButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/mypage"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:contentDescription="마이페이지"
+        app:tint="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

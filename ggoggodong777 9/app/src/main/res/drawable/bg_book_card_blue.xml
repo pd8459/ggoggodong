@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- 하늘색 계열 그라데이션 -->
+    <gradient
+        android:startColor="#E0F7FA"
+        android:endColor="#80DEEA"
+        android:angle="270" />
+
+    <!-- 모서리 둥글게 -->
+    <corners android:radius="12dp" />
+
+    <!-- 내부 여백으로 그림자 느낌 -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+
+</shape>

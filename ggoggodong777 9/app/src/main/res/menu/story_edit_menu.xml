@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_change_color"
+        android:title="색상 변경"
+        android:icon="@drawable/ic_color_lens"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_add_text"
+        android:title="글 상자 추가"
+        android:icon="@drawable/ic_text_fields"
+        app:showAsAction="ifRoom" />
+</menu>

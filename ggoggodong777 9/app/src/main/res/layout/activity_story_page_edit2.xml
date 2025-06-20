@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ✅ 항상 보이는 상단 버튼 (top_drawer 밖으로 이동) -->
+    <LinearLayout
+        android:id="@+id/color_toggle_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:padding="8dp"
+        android:layout_gravity="top|right"
+        android:elevation="5dp"
+        android:background="#FFF8DC">
+        <ImageButton
+            android:id="@+id/btn_add_text"
+            android:layout_width="50dp"
+            android:layout_height="33dp"
+            android:background="@drawable/textbox" />
+        <ImageButton
+            android:id="@+id/btn_toggle_colors"
+            android:layout_width="104dp"
+            android:layout_height="33dp"
+            android:background="@drawable/store" />
+
+        <ImageButton
+            android:id="@+id/btn_toggle_colors2"
+            android:layout_width="104dp"
+            android:layout_height="33dp"
+            android:background="@drawable/store" />
+    </LinearLayout>
+
+    <!-- ✅ 서랍: 색상 도구 영역 -->
+    <LinearLayout
+        android:id="@+id/top_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#EEEEEE"
+        android:visibility="gone"
+        android:elevation="4dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="50dp">
+
+
+        <!-- 첫 번째 색상 도구 -->
+        <HorizontalScrollView
+            android:id="@+id/color_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/color_palette"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/color_red"
+                    android:layout_width="140dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/rotation_red"
+                    android:text="빨강"
+                    android:textColor="#FFFFFF"/>
+
+                <ImageButton
+                    android:id="@+id/color_orange"
+                    android:layout_width="140dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/rotation_orange"
+                    android:text="주황"
+                    android:textColor="#FFFFFF"/>
+
+                <ImageButton
+                    android:id="@+id/color_yellow"
+                    android:layout_width="140dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/rotation_yellow"
+                    android:text="노랑"
+                    android:textColor="#000000"/>
+
+                <ImageButton
+                    android:id="@+id/color_green"
+                    android:layout_width="140dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/rotation_green"
+                    android:text="초록"
+                    android:textColor="#FFFFFF"/>
+
+                <ImageButton
+                    android:id="@+id/color_chartreuse"
+                    android:layout_width="140dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/rotation_chartreuse"
+                    android:text="연두"
+                    android:textColor="#FFFFFF"/>
+
+                <ImageButton
+                    android:id="@+id/color_blue"
+                    android:layout_width="140dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/rotation_blue"
+                    android:text="파랑"
+                    android:textColor="#FFFFFF"/>
+
+
+                <ImageButton
+                    android:id="@+id/color_sky_blue"
+                    android:layout_width="140dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/rotation_sky_blue"
+                    android:text="하늘색"
+                    android:textColor="#FFFFFF"/>
+
+                <ImageButton
+                    android:id="@+id/color_purple"
+                    android:layout_width="140dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/rotation_purple"
+                    android:text="보라"
+                    android:textColor="#FFFFFF"/>
+
+                <ImageButton
+                    android:id="@+id/color_pink"
+                    android:layout_width="140dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/rotation_pink"
+                    android:text="핑크"
+                    android:textColor="#FFFFFF"/>
+
+                <ImageButton
+                    android:id="@+id/color_black"
+                    android:layout_width="140dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/rotation_black"
+                    android:text="검정"
+                    android:textColor="#FFFFFF"/>
+
+                <ImageButton
+                    android:id="@+id/color_eraser"
+                    android:layout_width="140dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/rotation_eraser"
+                    android:text="지우개"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- 두 번째 색상 도구 -->
+        <HorizontalScrollView
+            android:id="@+id/color_scroll_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E0FFFF"
+            android:padding="8dp">
+
+            <ScrollView
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:animateLayoutChanges="true">
+
+                    <Button
+                        android:id="@+id/sticker_button"
+                        android:layout_width="210dp"
+                        android:layout_height="60dp"
+                        android:text="스티커" />
+
+                    <ScrollView
+                        android:id="@+id/sticker_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        android:visibility="gone">
+
+                        <GridLayout
+                            android:id="@+id/sticker_container1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="10">
+
+                            <ImageButton
+                                android:id="@+id/sticker1"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker1" />
+                            <ImageButton
+                                android:id="@+id/sticker2"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker2" />
+                            <ImageButton
+                                android:id="@+id/sticker3"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker3" />
+                            <ImageButton
+                                android:id="@+id/sticker4"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker4" />
+                            <ImageButton
+                                android:id="@+id/sticker5"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker5" />
+                            <ImageButton
+                                android:id="@+id/sticker6"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker6" />
+                            <ImageButton
+                                android:id="@+id/sticker7"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker7" />
+                            <ImageButton
+                                android:id="@+id/sticker8"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker8" />
+                            <ImageButton
+                                android:id="@+id/sticker9"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker9" />
+
+                            <ImageButton
+                                android:id="@+id/sticker12"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker12" />
+                            <ImageButton
+                                android:id="@+id/sticker13"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker13" />
+                            <ImageButton
+                                android:id="@+id/sticker14"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker14" />
+                            <ImageButton
+                                android:id="@+id/sticker10"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker10" />
+                            <ImageButton
+                                android:id="@+id/sticker11"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/sticker11" />
+                            <ImageButton
+                                android:id="@+id/sticker15"
+                                android:layout_width="120dp"
+                                android:layout_height="156dp"
+                                android:background="@drawable/sticker15" />
+                            <ImageButton
+                                android:id="@+id/sticker16"
+                                android:layout_width="120dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/sticker16" />
+                            <ImageButton
+                                android:id="@+id/sticker17"
+                                android:layout_width="120dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/sticker17" />
+                            <ImageButton
+                                android:id="@+id/sticker18"
+                                android:layout_width="120dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/sticker18" />
+                            <ImageButton
+                                android:id="@+id/sticker19"
+                                android:layout_width="120dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/sticker19" />
+                            <ImageButton
+                                android:id="@+id/sticker20"
+                                android:layout_width="120dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/sticker20" />
+                            <ImageButton
+                                android:id="@+id/sticker21"
+                                android:layout_width="120dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/sticker21" />
+                            <ImageButton
+                                android:id="@+id/sticker22"
+                                android:layout_width="120dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/sticker22" />
+                            <ImageButton
+                                android:id="@+id/sticker23"
+                                android:layout_width="120dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/sticker23" />
+                            <ImageButton
+                                android:id="@+id/sticker24"
+                                android:layout_width="120dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/sticker24" />
+                            <ImageButton
+                                android:id="@+id/sticker25"
+                                android:layout_width="120dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/sticker25" />
+                            <ImageButton
+                                android:id="@+id/sticker26"
+                                android:layout_width="120dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/sticker26" />
+                            <ImageButton
+                                android:id="@+id/sticker27"
+                                android:layout_width="120dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/sticker27" />
+                        </GridLayout>
+                    </ScrollView>
+
+                    <Button
+                        android:id="@+id/face_button"
+                        android:layout_width="210dp"
+                        android:layout_height="60dp"
+                        android:text="얼굴" />
+                    <ScrollView
+                        android:id="@+id/face_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        android:visibility="gone">
+                        <GridLayout
+                            android:id="@+id/face_container1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="10">
+                            <ImageButton
+                                android:id="@+id/face1"
+                                android:layout_width="156dp"
+                                android:layout_height="237dp"
+                                android:background="@drawable/face1" />
+                            <ImageButton
+                                android:id="@+id/face2"
+                                android:layout_width="156dp"
+                                android:layout_height="237dp"
+                                android:background="@drawable/face2" />
+                            <ImageButton
+                                android:id="@+id/face3"
+                                android:layout_width="156dp"
+                                android:layout_height="237dp"
+                                android:background="@drawable/face3" />
+                            <ImageButton
+                                android:id="@+id/face4"
+                                android:layout_width="156dp"
+                                android:layout_height="237dp"
+                                android:background="@drawable/face4" />
+                        </GridLayout>
+                    </ScrollView>
+
+                    <Button
+                        android:id="@+id/eyes_button"
+                        android:layout_width="210dp"
+                        android:layout_height="60dp"
+                        android:text="눈" />
+                    <ScrollView
+                        android:id="@+id/eyes_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        android:visibility="gone">
+                        <GridLayout
+                            android:id="@+id/eyes_container1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="10">
+                            <ImageButton
+                                android:id="@+id/eyes1"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes1" />
+                            <ImageButton
+                                android:id="@+id/eyes2"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes2" />
+                            <ImageButton
+                                android:id="@+id/eyes3"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes3" />
+                            <ImageButton
+                                android:id="@+id/eyes4"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes4" />
+                            <ImageButton
+                                android:id="@+id/eyes5"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes5" />
+                            <ImageButton
+                                android:id="@+id/eyes6"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes6" />
+                            <ImageButton
+                                android:id="@+id/eyes7"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes7" />
+                            <ImageButton
+                                android:id="@+id/eyes8"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes8" />
+                            <ImageButton
+                                android:id="@+id/eyes9"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes9" />
+                            <ImageButton
+                                android:id="@+id/eyes10"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes10" />
+                            <ImageButton
+                                android:id="@+id/eyes11"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes11" />
+                            <ImageButton
+                                android:id="@+id/eyes12"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes12" />
+                            <ImageButton
+                                android:id="@+id/eyes13"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes13" />
+                            <ImageButton
+                                android:id="@+id/eyes14"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes14" />
+                            <ImageButton
+                                android:id="@+id/eyes15"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes15" />
+                            <ImageButton
+                                android:id="@+id/eyes16"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes16" />
+                            <ImageButton
+                                android:id="@+id/eyes17"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes17" />
+                            <ImageButton
+                                android:id="@+id/eyes18"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes18" />
+                            <ImageButton
+                                android:id="@+id/eyes19"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes19" />
+                            <ImageButton
+                                android:id="@+id/eyes20"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes20" />
+                            <ImageButton
+                                android:id="@+id/eyes21"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes21" />
+                            <ImageButton
+                                android:id="@+id/eyes22"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes22" />
+                            <ImageButton
+                                android:id="@+id/eyes23"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes23" />
+                            <ImageButton
+                                android:id="@+id/eyes24"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/eyes24" />
+                        </GridLayout>
+                    </ScrollView>
+                    <Button
+                        android:id="@+id/nose_button"
+                        android:layout_width="210dp"
+                        android:layout_height="60dp"
+                        android:text="코" />
+                    <ScrollView
+                        android:id="@+id/nose_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        android:visibility="gone">
+                        <GridLayout
+                            android:id="@+id/nose_container1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="10">
+                            <ImageButton
+                                android:id="@+id/nose1"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose1" />
+                            <ImageButton
+                                android:id="@+id/nose2"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose2" />
+                            <ImageButton
+                                android:id="@+id/nose3"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose3" />
+                            <ImageButton
+                                android:id="@+id/nose4"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose4" />
+                            <ImageButton
+                                android:id="@+id/nose5"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose5" />
+                            <ImageButton
+                                android:id="@+id/nose6"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose6" />
+                            <ImageButton
+                                android:id="@+id/nose7"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose7" />
+                            <ImageButton
+                                android:id="@+id/nose8"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose8" />
+                            <ImageButton
+                                android:id="@+id/nose9"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose9" />
+                            <ImageButton
+                                android:id="@+id/nose10"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose10" />
+                            <ImageButton
+                                android:id="@+id/nose11"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose11" />
+                            <ImageButton
+                                android:id="@+id/nose12"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose12" />
+                            <ImageButton
+                                android:id="@+id/nose13"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose13" />
+                            <ImageButton
+                                android:id="@+id/nose14"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose14" />
+                            <ImageButton
+                                android:id="@+id/nose15"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose15" />
+                            <ImageButton
+                                android:id="@+id/nose16"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose16" />
+                            <ImageButton
+                                android:id="@+id/nose17"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose17" />
+                            <ImageButton
+                                android:id="@+id/nose18"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose18" />
+                            <ImageButton
+                                android:id="@+id/nose19"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose19" />
+                            <ImageButton
+                                android:id="@+id/nose20"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose20" />
+                            <ImageButton
+                                android:id="@+id/nose21"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose21" />
+                            <ImageButton
+                                android:id="@+id/nose22"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose22" />
+                            <ImageButton
+                                android:id="@+id/nose23"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose23" />
+                            <ImageButton
+                                android:id="@+id/nose24"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/nose24" />
+                        </GridLayout>
+                    </ScrollView>
+                    <Button
+                        android:id="@+id/mouth_button"
+                        android:layout_width="210dp"
+                        android:layout_height="60dp"
+                        android:text="입" />
+                    <!-- 입 -->
+                    <ScrollView
+                        android:id="@+id/mouth_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        android:visibility="gone">
+                        <GridLayout
+                            android:id="@+id/mouth_container1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="10">
+                            <ImageButton
+                                android:id="@+id/mouth1"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth1" />
+                            <ImageButton
+                                android:id="@+id/mouth2"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth2" />
+                            <ImageButton
+                                android:id="@+id/mouth3"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth3" />
+                            <ImageButton
+                                android:id="@+id/mouth4"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth4" />
+                            <ImageButton
+                                android:id="@+id/mouth5"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth5" />
+                            <ImageButton
+                                android:id="@+id/mouth6"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth6" />
+                            <ImageButton
+                                android:id="@+id/mouth7"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth7" />
+                            <ImageButton
+                                android:id="@+id/mouth8"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth8" />
+                            <ImageButton
+                                android:id="@+id/mouth9"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth9" />
+                            <ImageButton
+                                android:id="@+id/mouth10"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth10" />
+                            <ImageButton
+                                android:id="@+id/mouth11"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth11" />
+                            <ImageButton
+                                android:id="@+id/mouth12"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth12" />
+                            <ImageButton
+                                android:id="@+id/mouth13"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth13" />
+                            <ImageButton
+                                android:id="@+id/mouth14"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth14" />
+                            <ImageButton
+                                android:id="@+id/mouth15"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth15" />
+                            <ImageButton
+                                android:id="@+id/mouth16"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth16" />
+                            <ImageButton
+                                android:id="@+id/mouth17"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth17" />
+                            <ImageButton
+                                android:id="@+id/mouth18"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth18" />
+                            <ImageButton
+                                android:id="@+id/mouth19"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth19" />
+                            <ImageButton
+                                android:id="@+id/mouth20"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth20" />
+                            <ImageButton
+                                android:id="@+id/mouth21"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth21" />
+                            <ImageButton
+                                android:id="@+id/mouth22"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth22" />
+                            <ImageButton
+                                android:id="@+id/mouth23"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth23" />
+                            <ImageButton
+                                android:id="@+id/mouth24"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth24" />
+                            <ImageButton
+                                android:id="@+id/mouth25"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/mouth25" />
+                        </GridLayout>
+                    </ScrollView>
+                    <!-- 헤어 -->
+                    <Button
+                        android:id="@+id/hair_button"
+                        android:layout_width="210dp"
+                        android:layout_height="60dp"
+                        android:text="헤어" />
+                    <ScrollView
+                        android:id="@+id/hair_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        android:visibility="gone">
+                        <GridLayout
+                            android:id="@+id/hair_container1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="10">
+                            <ImageButton
+                                android:id="@+id/hair1"
+                                android:layout_width="156dp"
+                                android:layout_height="237dp"
+                                android:background="@drawable/hair1" />
+                            <ImageButton
+                                android:id="@+id/hair2"
+                                android:layout_width="156dp"
+                                android:layout_height="237dp"
+                                android:background="@drawable/hair2" />
+                            <ImageButton
+                                android:id="@+id/hair3"
+                                android:layout_width="156dp"
+                                android:layout_height="237dp"
+                                android:background="@drawable/hair3" />
+                            <ImageButton
+                                android:id="@+id/hair4"
+                                android:layout_width="156dp"
+                                android:layout_height="237dp"
+                                android:background="@drawable/hair4" />
+                            <ImageButton
+                                android:id="@+id/hair5"
+                                android:layout_width="156dp"
+                                android:layout_height="237dp"
+                                android:background="@drawable/hair5" />
+                            <ImageButton
+                                android:id="@+id/hair6"
+                                android:layout_width="156dp"
+                                android:layout_height="237dp"
+                                android:background="@drawable/hair6" />
+                            <ImageButton
+                                android:id="@+id/hair7"
+                                android:layout_width="156dp"
+                                android:layout_height="237dp"
+                                android:background="@drawable/hair7" />
+                            <ImageButton
+                                android:id="@+id/hair8"
+                                android:layout_width="156dp"
+                                android:layout_height="237dp"
+                                android:background="@drawable/hair8" />
+                        </GridLayout>
+                    </ScrollView>
+                    <Button
+                        android:id="@+id/background_button"
+                        android:layout_width="210dp"
+                        android:layout_height="60dp"
+                        android:text="배경" />
+                    <ScrollView
+                        android:id="@+id/background_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        android:visibility="gone">
+                        <GridLayout
+                            android:id="@+id/background_container1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="10">
+                            <ImageButton
+                                android:id="@+id/background1"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background1" />
+
+                            <ImageButton
+                                android:id="@+id/background2"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background2" />
+                            <ImageButton
+                                android:id="@+id/background3"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background3" />
+                            <ImageButton
+                                android:id="@+id/background4"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background4" />
+                            <ImageButton
+                                android:id="@+id/background5"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background5" />
+                            <ImageButton
+                                android:id="@+id/background6"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background6" />
+                            <ImageButton
+                                android:id="@+id/background7"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background7" />
+                            <ImageButton
+                                android:id="@+id/background8"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background8" />
+                            <ImageButton
+                                android:id="@+id/background9"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background9" />
+                            <ImageButton
+                                android:id="@+id/background10"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background10" />
+                            <ImageButton
+                                android:id="@+id/background11"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background11" />
+                            <ImageButton
+                                android:id="@+id/background12"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background12" />
+                            <ImageButton
+                                android:id="@+id/background13"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background13" />
+                            <ImageButton
+                                android:id="@+id/background14"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background14" />
+                            <ImageButton
+                                android:id="@+id/background15"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background15" />
+                            <ImageButton
+                                android:id="@+id/background16"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background16" />
+                            <ImageButton
+                                android:id="@+id/background17"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background17" />
+                            <ImageButton
+                                android:id="@+id/background18"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background18" />
+                            <ImageButton
+                                android:id="@+id/background19"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background19" />
+                            <ImageButton
+                                android:id="@+id/background20"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background20" />
+                            <ImageButton
+                                android:id="@+id/background21"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background21" />
+                            <ImageButton
+                                android:id="@+id/background22"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background22" />
+                            <ImageButton
+                                android:id="@+id/background23"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background23" />
+                            <ImageButton
+                                android:id="@+id/background24"
+                                android:layout_width="120dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/background24" />
+
+                        </GridLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </ScrollView>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!-- 🔷 고정된 메인 콘텐츠 -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF8DC"
+        android:layout_gravity="bottom"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 / 5 페이지"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/my_page_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내 페이지:"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp" />
+
+        <FrameLayout
+            android:id="@+id/drawing_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.example.ggoggodong.story.StoryDrawingView
+                android:id="@+id/drawing_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageButton
+                android:id="@+id/btn_prev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:background="@null"
+                android:src="@drawable/prev"
+                android:contentDescription="이전 버튼" />
+
+
+            <ImageButton
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:background="@null"
+                android:src="@drawable/next"
+                android:contentDescription="다음 버튼" />
+
+            <ImageButton
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:background="@null"
+                android:src="@drawable/save"
+                android:contentDescription="저장 버튼" />
+
+            <ImageButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:src="@drawable/delete"
+                android:contentDescription="삭제 버튼" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
+

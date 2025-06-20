@@ -1,0 +1,73 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ggoggodong"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".SignUpActivity"/>
+        <activity android:name=".LoginActivity" />
+
+        <activity
+            android:name=".ActualSignUpActivity"
+            android:exported="true">
+
+            <!-- Firebase Dynamic Link 인식용 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="ggoggodong.page.link" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".GenreActivity" />
+        <activity android:name=".story.AdventureFragment" />
+        <activity android:name=".story.ComicFragment" />
+        <activity android:name=".story.FableFragment" />
+        <activity android:name=".story.FamilyFragment" />
+        <activity android:name=".story.FantasyFragment" />
+        <activity android:name=".story.MoralFragment" />
+        <activity android:name=".story.TraditionalFragment" />
+        <activity android:name=".MyPageActivity" />
+        <activity android:name=".story.TraditionalStoryEditStoryActivity" />
+        <activity android:name=".story.FantasyEditStoryActivity" />
+        <activity android:name=".story.MoralEditStoryActivity" />
+        <activity android:name=".story.FableEditStoryActivity" />
+        <activity android:name=".story.AdventureEditStoryActivity" />
+        <activity android:name=".story.ComicEditStoryActivity" />
+        <activity android:name=".story.FamilyEditStoryActivity" />
+        <activity android:name=".story.DrawingView" />
+        <activity android:name=".story.DrawingUIHelper" />
+        <activity android:name=".profile.ProfileActivity" />
+        <activity android:name=".profile.ProfileDrawingView" />
+        <activity android:name=".story.StoryDrawingView" />
+        <activity android:name=".TermsActivity1" />
+        <activity android:name=".model.Line" />
+        <activity android:name=".friend.AddFriendActivity"></activity>
+        <activity android:name=".friend.FriendsActivity"></activity>
+        <activity android:name=".friend.SelectFriendActivity"></activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 📌 배경 이미지 -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mypage_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 👤 프로필 + ID / 등급 (가로 정렬) -->
+    <LinearLayout
+        android:id="@+id/profileSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="80dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+
+        <!-- 왼쪽: 프로필 이미지 (200dp) -->
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/circle_background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_profile" />
+
+        <!-- 오른쪽: ID / 등급 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="32dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/userId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID: example123"
+                android:textSize="30sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/userGrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="등급: 새싹"
+                android:textSize="30sp"
+                android:textColor="#000000"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ✅ 버튼 4개 -->
+    <LinearLayout
+        android:id="@+id/buttonRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="16dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/rounded_border"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/profileSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <android.widget.Button
+            android:id="@+id/btnGrade"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="🥇 등급"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/anuphan_regular"
+            android:background="@drawable/bg_btn_grade"
+            android:stateListAnimator="@null"
+            android:elevation="0dp"
+            android:layout_marginEnd="12dp"/>
+
+        <android.widget.Button
+            android:id="@+id/btnFriends"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="👥 친구"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/anuphan_regular"
+            android:background="@drawable/bg_btn_friends"
+            android:stateListAnimator="@null"
+            android:elevation="0dp"
+            android:layout_marginEnd="12dp"/>
+
+        <android.widget.Button
+            android:id="@+id/btnMy"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="📖 내 동화"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/anuphan_regular"
+            android:background="@drawable/bg_btn_story"
+            android:stateListAnimator="@null"
+            android:elevation="0dp"
+            android:layout_marginEnd="12dp"/>
+
+        <android.widget.Button
+            android:id="@+id/btnChange"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:text="🔒 비밀번호 변경"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/anuphan_regular"
+            android:background="@drawable/bg_btn_password"
+            android:stateListAnimator="@null"
+            android:elevation="0dp"
+            android:layout_marginEnd="12dp" />
+    </LinearLayout>
+
+
+
+    <!-- 팝업 위치 기준 영역 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/green_section"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/buttonRow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/btnLogout"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:src="@drawable/logout"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:contentDescription="로그아웃"
+        android:layout_margin="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

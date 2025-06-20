@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.Ggoggodong" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+</resources>

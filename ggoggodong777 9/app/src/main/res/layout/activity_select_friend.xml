@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".friend.SelectFriendActivity">
+
+    <!-- 배경 이미지 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/friendselect_background"
+        android:contentDescription="배경" />
+
+    <!-- 콘텐츠 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- 제목 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="친구 선택"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:fontFamily="@font/anuphan_regular"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_white_rounded"
+            android:padding="12dp" />
+
+        <!-- 친구 리스트 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFriends"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            android:paddingBottom="8dp" />
+
+        <!-- 완료 버튼 -->
+        <Button
+            android:id="@+id/btnConfirmSelection"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="선택 완료"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/anuphan_regular"
+            android:background="@drawable/btn_rounded_green"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</FrameLayout>
